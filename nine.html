@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <script type="text/javascript">
+      var a = 0;
+      do {
+        a++;
+        document.write(a+"<br>");
+      } while (a<10);
+
+      document.write("<br>");
+
+      //major difference between while(entry control) and do while loop(exit control)
+      var b = 10;
+      while (b<9) {
+        document.write("while loop <br>");
+        b++;
+      }
+
+      document.write("value of \'b\' after while loop : "+b+"<br>");
+
+      do {
+        document.write("do while loop is working <br>");
+        b++;
+      } while (b<9);
+
+      document.write("value of \'b\' after do while loop : "+b+"<br>");
+
+    </script>
+
+  </body>
+</html>
