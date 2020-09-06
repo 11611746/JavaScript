@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <script type="text/javascript">
+      //Length property : returns the size of the array
+
+      var array = [1,2,3,4,5,6,7];
+      for (var i = 0; i < array.length; i++) {
+        document.write(array[i]+"<br>");
+      }
+
+      document.write("<br>");
+
+      //sort() method : sort array in ascending order
+      var array2 = [2,5,1,8,4,0,7];
+      document.write("original array: <br>"+array2+"<br>");
+      document.write("sorted array: <br>"+array2.sort()+"<br>");
+
+      document.write("<br>");
+
+      //push() method : insert an element in the last index of an array
+      array2.push(29,78);
+      document.write("push 25 : <br>"+array2+"<br>");
+
+      //pop() method: delete the last index element from an array
+      array2.pop();
+      document.write("pop : <br>"+array2+"<br>");
+
+      //shift() method: delete the 0 index element of an array
+      array2.shift();
+      document.write("shift : <br>"+array2+"<br>");
+
+      //unshift() method: insert an element in the 0 index of an array
+      array2.unshift(99);
+      document.write("unshift 99 : <br>"+array2+"<br>");
+
+      document.write("<br>");
+
+      //reverse() method : reverse an array
+      array2.reverse();
+      document.write("reverse : <br>"+array2+"<br>");
+
+      document.write("<br>");
+
+      //Array.isArray() method : to check whether it is an array or not
+      document.write("Check Array2 : <br>"+Array.isArray(array2)+"<br>");
+
+      var array3 = 1;
+      document.write("Check Array3 : <br>"+Array.isArray(array3)+"<br>");
+
+      document.write("<br>");
+
+      //concat() method : to join two arrays
+      var array4 = ["hi","hello","what's up","?"];
+      document.write("Concat Array2 and Array4 : <br>"+array2.concat(array4)+"<br>");
+
+      document.write("<br>");
+
+      //indexOf() method : to find the position of an element in an array. index = position-1
+      document.write("index of 2 : <br>"+array2.concat(array4).indexOf("hello")+"<br>");
+
+    </script>
+
+  </body>
+</html>
