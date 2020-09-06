@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <input type="button" name="" onclick="runFunction()" value="Move Next">
+
+    <script type="text/javascript">
+      //prompt box: to take input from user
+
+      function runFunction(){
+      var user = confirm("Do you want to enter any number?");
+
+      if (user==true) {
+        window.open("http://127.0.0.1:3000/promptBox.html");
+        return true;
+      }
+      else{
+        document.write("OOPS you clicked \"Cancle\" ");
+        return false;
+      }
+    }
+
+    </script>
+
+  </body>
+</html>
