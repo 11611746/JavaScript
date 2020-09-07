@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <script type="text/javascript">
+      //Length property: give the length of a string
+      var a = "hello hi,";
+      var b = "How is your work going on?"
+      document.write("String A : "+a+"<br>");
+      document.write("String B : "+b+"<br><br>");
+      document.write("Length of the string A : "+a.length+"<br><br>");
+
+      //charAt(): this method returns the character at particular index
+      document.write("Character at position \'7\' in string A : "+a.charAt(7)+"<br><br>");
+
+      //indexof(): this method returns the index of a particular character, it search from the first
+      document.write("Index of \'l\' in string A : "+a.indexOf("l")+"<br><br>");
+
+      //indexof(): this method returns the index of a particular character, it search from the last
+      document.write("Last Index of \'l\' in string A : "+a.lastIndexOf("l")+"<br><br>");
+
+      //replace(): this method replace the given character with a existing character in a string. It replace only one character
+      document.write("Replace \'l\' with \'@\' in string A : "+a.replace("l","@")+"<br><br>");
+
+      //replaceAll(): this method replace the given character with a existing character in a string. It replace all the similar characters
+      document.write("Replace All \'o\' with \'#\' in string B : "+b.replaceAll("o","@")+"<br><br>");
+
+      //toUpperCase(): this method transform all the character in a string to Upper Case
+      document.write("Upper Case of string A : "+a.toUpperCase()+"<br><br>");
+
+      //toLowerCase(): this method transform all the character in a string to Lower Case
+      document.write("Lower Case of string B : "+b.toLowerCase()+"<br><br>");
+
+      //concat(): this method join two string together
+      document.write("Concat String A and B : "+a.concat(b)+"<br><br>");
+
+      //+: concat
+      var c = "I love javascript.";
+      document.write("String C : "+c+"<br><br>");
+      document.write("Concat String A and C using \'+\' operator : "+a+c+"<br>");
+
+    </script>
+
+  </body>
+</html>
