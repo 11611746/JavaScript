@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <script type="text/javascript">
+      var a = "hello";                    //return type string
+      var b = new String("hello");        //return type object
+
+      document.write("string in \'a\' : "+a+"<br> type of \'a\' : "+typeof(a)+"<br><br>");
+      document.write("string in \'b\' : "+b+"<br> type of \'b\' : "+typeof(b)+"<br><br>");
+
+      document.write("Comparing \'a\' and \'b\' values <br>")
+      if (a==b) {
+        document.write("string matched");
+      }
+      else{
+        document.write("string don't matched");
+      }
+
+      document.write("<br><br>")
+
+      document.write("Comparing \'a\' and \'b\' values and type <br>")
+      if (a===b) {
+        document.write("string matched");
+      }
+      else{
+        document.write("string don't matched");
+      }
+
+
+
+    </script>
+
+  </body>
+</html>
