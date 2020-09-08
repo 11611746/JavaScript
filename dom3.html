@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <!--*id name must be unique and it is denoted by '#'
+        *class name may or may not be unique and it is denoted by '.'
+      -->
+    <p id="textcolor">Hello hi,</p>
+    <p class="how">How are you?</p>
+    <p class="how">How are you petter?</p>
+
+    <ul><li>Morning</li>
+        <li>Afternoon</li>
+        <li>Evening</li>
+        <li>Night</li></ul>
+
+    <input type="button" value="Dark Mode" onclick="runDarkmode()"><br><br>
+
+    <input type="button" value="Dark Mode 1" onclick="runDarkmode1()"><br><br>
+
+    <input type="button" value="Dark Mode With Text Formatting" onclick="runDarkmodeTextFormating()">
+
+    <script type="text/javascript">
+    
+    document.getElementById("textcolor").style.color = "#bb86fc";
+
+    function runDarkmode(){
+            document.body.style.color = "#808080";
+            document.body.style.background = "#1f1a24";    
+    }
+
+    function runDarkmode1(){
+            document.body.setAttribute(
+                "style","color:#808080; background-color:#1f1a24; font-size:2rem"
+        );    
+    }
+
+    function runDarkmodeTextFormating(){
+        document.getElementById("textcolor").setAttribute(
+            "style","color:#bb86fc; background-color:#1f1a24; text-align:center; font-size:5rem"
+        );
+    }
+    </script>
+
+  </body>
+</html>
