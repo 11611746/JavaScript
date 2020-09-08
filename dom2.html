@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <!--*id name must be unique and it is denoted by '#'
+        *class name may or may not be unique and it is denoted by '.'
+      -->
+    <p id="hello">Hello good hi</p>
+    <p class="how">How are you?</p>
+    <p class="how">How are you petter?</p>
+
+    <ul><li>Morning</li>
+        <li>Afternoon</li>
+        <li>Evening</li>
+        <li>Night</li></ul>
+
+    <script type="text/javascript">
+    //access children of a body
+    var child = document.body.children;
+    console.log(child);
+
+    //add new child in a body
+    var paragraph = document.createElement("p");   
+    var textNode = document.createTextNode("New node is created");
+    paragraph.appendChild(textNode);
+    console.log(paragraph);
+
+    document.body.appendChild(paragraph);
+
+    //access first child and last child
+    var list = document.querySelector("ul");
+    console.log(list);
+    
+    //first child
+    console.log(list.firstChild);
+    document.write(list.firstChild.innerHTML+"<br>");
+    //last  child
+    console.log(list.lastChild);
+    document.write(list.lastChild.innerHTML);
+
+    //siblings
+    var firstsiblings = hello.nextElementSibling;
+    console.log(firstsiblings);
+
+    //parent
+    console.log(paragraph.parentNode);
+
+    </script>
+
+  </body>
+</html>
