@@ -8,11 +8,32 @@
     <!--*id name must be unique and it is denoted by '#'
         *class name may or may not be unique and it is denoted by '.'
       -->
-    <p id="hello">Hello</p>
+    <p id="hello">Hello good hi</p>
     <p class="how">How are you?</p>
+    <p class="how">How are you petter?</p>
 
     <script type="text/javascript">
-      document.write("fi");
+    //access html element by id
+    var id1 = document.getElementById("hello").innerHTML;
+      document.write("getElementById :   "+id1+"<br>");
+
+    var id2 = document.getElementById("hello").innerText;
+      document.write("getElementById :   "+id2+"<br>");
+
+    //access element by class
+    var class1 = document.getElementsByClassName("how")[1].innerHTML;
+      document.write("getElementsByClassName :   "+class1+"<br>");
+
+    //access element by tag name
+    var tagName = document.getElementsByTagName("p")[2].innerHTML
+      document.write("getElementsByTagName :   "+tagName+"<br>");
+      console.log(tagName);
+
+    //access first element by tag name/class
+    var firstElementParagraph = document.querySelector("p").innerText;
+      document.write("get first element, querySelector :   "+firstElementParagraph+"<br>");
+      console.log(firstElementParagraph);
+
     </script>
 
   </body>
