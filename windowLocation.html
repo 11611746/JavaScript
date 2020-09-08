@@ -1,0 +1,30 @@
+<button onclick="myFunction()">Material.io</button><br><br>
+
+<button onclick="myFun()">GitHub</button><br><br>
+
+<script type="text/javascript">
+    //href: header reference
+    document.write(window.location.href);
+    document.write("<br>");
+
+    //hostname
+    document.write(window.location.hostname);
+    document.write("<br>");
+
+    //pathname
+    document.write(window.location.pathname);
+    document.write("<br>");
+
+    //protocol
+    document.write(window.location.protocol);
+    document.write("<br>");
+
+    function myFunction(){
+        window.location = "https://material.io/design/color/dark-theme.html#ui-application";
+    }
+
+    function myFun(){
+        window.location.assign("https://github.com/11611746/JavaScript");
+    }
+
+</script>
