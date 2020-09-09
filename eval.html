@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Eval Function</title>
+    <link rel="stylesheet" href="darkStyle.css">
+    <script type="text/javascript" src="darkMode.js"></script>
+  </head>
+  <body>
+    
+    <script type="text/javascript">
+    var a = 10;
+    var b = 20;
+    document.write("Addition 10+20 :   "+eval("a+b")+"<br>");
+    document.write("Substraction 10-20 :   "+eval("a-b")+"<br>");
+    document.write("Multiplication 10*20 :   "+eval("a*b")+"<br>");
+    document.write("Division 20/10 :   "+eval("b/a")+"<br><br>");
+
+    document.write("Add two numbers without variable 50+50 :   "+eval("50+50")+"<br>");
+    document.write("Eval expression Comparison \"eval(\"a*b\") = = = eval(\"200\")\" :   ");
+    document.write(eval("a*b")===eval("200"));
+
+    </script>
+
+  </body>
+</html>
