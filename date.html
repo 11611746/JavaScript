@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Date</title>
+    <link rel="stylesheet" href="darkStyle.css">
+    <script type="text/javascript" src="darkMode.js"></script>
+  </head>
+  <body>
+    <script type="text/javascript">
+        var date1 = new Date();
+        document.write(date1+"<br><br>");
+
+        var date2 = new Date(1996,08,11);
+        document.write(date2+"<br><br>");
+
+        var date3 = new Date(1996,08);
+        document.write(date3+"<br><br>");
+
+        var date4 = new Date(1996);
+        document.write(date4+"<br><br>");
+
+        var year = date1.getUTCFullYear();
+        var month = date1.getUTCMonth()+1;
+        var date = date1.getUTCDate();
+        var day = date1.getUTCDay();
+
+        document.write("date/month/year :   "+date+"/"+month+"/"+year+"<br>");
+        document.write("day/month/year :   "+day+"/"+month+"/"+year);
+
+//        date1.setMonth(11);
+//        date1.setDate(11);
+        date1.setFullYear(2021,11,11);
+        document.write("<br><br> New Date :   "+date1);
+
+
+    </script>
+
+  </body>
+</html>
