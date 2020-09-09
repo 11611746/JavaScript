@@ -28,19 +28,29 @@
     document.getElementById("textcolor").style.color = "#bb86fc";
 
     function runDarkmode(){
-            document.body.style.color = "#808080";
-            document.body.style.background = "#1f1a24";    
+      document.body.style.color = "#808080";
+      document.body.style.background = "#1f1a24";    
     }
 
+    var count = 0;
     function runDarkmode1(){
-            document.body.setAttribute(
-                "style","color:#808080; background-color:#1f1a24; font-size:2rem"
-        );    
+      count++;
+      if(count%2!=0){
+        document.body.setAttribute(
+        "style","color:#808080; background-color:#1f1a24; font-size:2rem"
+        ); 
+      }
+      else{
+        document.body.setAttribute(
+        "style","color:#000000; background-color:#ffffff; font-size:1rem"
+        ); 
+      }
+         
     }
 
     function runDarkmodeTextFormating(){
-        document.getElementById("textcolor").setAttribute(
-            "style","color:#bb86fc; background-color:#1f1a24; text-align:center; font-size:5rem"
+      document.getElementById("textcolor").setAttribute(
+        "style","color:#bb86fc; background-color:#1f1a24; text-align:center; font-size:5rem"
         );
     }
     </script>
