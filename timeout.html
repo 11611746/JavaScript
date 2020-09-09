@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Dynamic Time</title>
+    <link rel="stylesheet" href="darkStyle.css">
+    <script type="text/javascript" src="darkMode.js"></script>
+  </head>
+  <body>
+    
+    <button onclick="clearInterval(timeout)">Stop Alert</button>
+    <br><br>
+    <p id="time">Alert Count</p>
+    
+    <script type="text/javascript">
+    var timeout = setTimeout(display,5000);
+    var count = 0;
+
+    function display(){
+        count++;
+        alert("Did you understood the concept?");
+        document.getElementById("time").innerHTML = "Alert Count :  "+count;
+        timeout = setTimeout(display,5000);
+    }
+
+    </script>
+
+  </body>
+</html>
