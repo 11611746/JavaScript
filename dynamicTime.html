@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Dynamic Time</title>
+    <link rel="stylesheet" href="darkStyle.css">
+    <script type="text/javascript" src="darkMode.js"></script>
+  </head>
+  <body>
+    
+    <button onclick="start()">Start Time</button>
+    <button onclick="stop()">Stop Time</button>
+    <br><br>
+    <p id="time"></p>
+    
+    <script type="text/javascript">
+    var updateTime;
+
+    function start(){
+        updateTime = setInterval(runTimer,1000);
+    }
+
+    function stop(){
+        clearInterval(updateTime);
+    }
+
+    function runTimer(){
+        var date = new Date();
+        var time = date.toLocaleTimeString();
+        document.getElementById("time").innerHTML = time;
+    }
+
+
+
+
+    </script>
+
+  </body>
+</html>
