@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Js Object</title>
+  </head>
+  <body>
+
+    <script type="text/javascript">
+
+    var obj = {
+        FirstName : "Paul",
+        LastName : "Dutta",
+        Degree : "B.tech",
+        Year : 2020
+    }
+
+    document.write("FirstName : "+obj.FirstName+"<br>");
+    document.write("LastName : "+obj.LastName+"<br>");
+    document.write("Degree : "+obj.Degree+"<br>");
+    document.write("Year : "+obj.Year+"<br><br>");
+    console.log(obj);
+
+    //value update
+    obj.Degree = "Completed B.Tech";
+    document.write("Updated Value : <br><br>");
+    document.write("FirstName : "+obj.FirstName+"<br>");
+    document.write("LastName : "+obj.LastName+"<br>");
+    document.write("Degree : "+obj.Degree+"<br>");
+    document.write("Year : "+obj.Year+"<br><br>");
+
+    //insert new propert and Value
+    obj.Course = "CSE";
+    document.write("Insert New Property and Value : <br><br>");
+    document.write("FirstName : "+obj.FirstName+"<br>");
+    document.write("LastName : "+obj.LastName+"<br>");
+    document.write("Degree : "+obj.Degree+"<br>");
+    document.write("Course : "+obj.Course+"<br>");
+    document.write("Year : "+obj.Year+"<br><br>");
+
+    //delete property
+    delete obj.Course;
+    document.write("Insert New Property and Value : <br><br>");
+    document.write("FirstName : "+obj.FirstName+"<br>");
+    document.write("LastName : "+obj.LastName+"<br>");
+    document.write("Degree : "+obj.Degree+"<br>");
+    document.write("Course : "+obj.Course+"<br>");
+    document.write("Year : "+obj.Year+"<br><br>");
+    
+    </script>
+  </body>
+</html>
