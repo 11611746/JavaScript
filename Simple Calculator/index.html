@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Rolling Dice</title>
+  <link rel="stylesheet" href="style.css" type="text/css">
+  </head>
+  <body>
+    <div class="main">
+      <h1 id="heading">Simple Calculator</h1>
+      <div ><input type="text" id="display"></div>
+      <div class="button">
+          <button id="btn7" onclick="input(7)">7</button>
+          <button id="btn8" onclick="input(8)">8</button>
+          <button id="btn9" onclick="input(9)">9</button>
+          <button id="btnP" onclick="operator(`+`)">+</button>
+      </div>
+      <div class="button">
+        <button id="btn4" onclick="input(4)">4</button>
+        <button id="btn5" onclick="input(5)">5</button>
+        <button id="btn6" onclick="input(6)">6</button>
+        <button id="btnMi" onclick="operator(`-`)">-</button>
+    </div>
+    <div class="button">
+        <button id="btn1" onclick="input(1)">1</button>
+        <button id="btn2" onclick="input(2)">2</button>
+        <button id="btn3" onclick="input(3)">3</button>
+        <button id="btnMu" onclick="operator(`*`)">*</button>
+    </div>
+    <div class="button">
+        <button id="btn0" onclick="input0">0</button>
+        <button id="btnD" onclick="operator(`/`)">/</button>
+        <button id="btnE" onclick="calculate()">=</button>
+        <button id="btnClr" onclick="eraseAll()">Clear</button>
+    </div>
+    </div>
+    <script type="text/javascript" src="calculator.js"></script>
+  </body>
+</html>
