@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Js Object</title>
+  </head>
+  <body>
+
+    <script type="text/javascript">
+
+    //Primitive type
+        document.write("Comparing Primitive type -> 5 = = = 5 : ");
+        document.write(5===5);
+    
+        document.write("<br><br>In Javascript array's and object are \"Reference Type\" ");
+    //Reference type array
+        document.write("<br><br>Comparing Reference type -> [] = = = [] : ");
+        document.write([]===[]);
+
+    var a = [];
+    var b = [];
+        document.write("<br><br>Comparing Reference type -> a = = = b : ");
+        document.write(a===b);
+    var c = a;
+        document.write("<br><br>Comparing Reference type -> a = = = c : ");
+        document.write(a===c);
+
+    //Reference type object
+    var d = {val:10};
+    var e = {val:10};
+        document.write("<br><br>Comparing Reference type -> d = = = e : ");
+        document.write(d===e);
+    var f = d;
+        document.write("<br><br>Comparing Reference type -> f = = = d : ");
+        document.write(f===d);
+
+        
+    </script>
+  </body>
+</html>
