@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Js Object</title>
+  </head>
+  <body>
+
+    <p>Input String</p><input type="text" onkeyup="runFun()" id="input"><br>
+    <p>Reversed String</p><input type="text"  id="output">
+
+    <script type="text/javascript">
+    function runFun(){
+        var str = document.getElementById("input").value;
+        var temp = "";
+        
+        for(var i = str.length-1; i>=0; i--)
+            temp = temp + str[i]
+
+        document.getElementById("output").value = temp;
+    }
+        
+    </script>
+  </body>
+</html>
