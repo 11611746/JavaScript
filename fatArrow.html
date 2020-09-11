@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <script type="text/javascript">
+    //normal function  
+    add();                      //function call
+    
+    function add(){
+        var a = 10;
+        var b = 10;
+        document.write("<br><br>Add "+a+" + "+b+" = "+(a+b));
+    }
+
+    add();                      //function call
+
+    //function with parameters
+    addition(50,5);             //function call and passing arguments
+    
+    function addition(a,b){
+        var c = a;
+        var d = b;
+     document.write("<br><br>Add "+c+" + "+d+" = "+(c+d));
+    }
+    addition(5,5);              //function call and passing arguments
+
+
+    //ECMA Script 2016 updates
+    //you cannot call the function before defining it.
+    //function variable name cannot be same
+    //type 1
+    const multiply1 = () => {
+        let a = 10;
+        let b = 20;
+        document.write(`<br><br>Multiplying ${a} and ${b} is ${a*b}`);
+    };    
+    multiply1();                 //function calling
+
+    //type 2
+    const multiply2 = (a,b) => document.write(`<br><br>Multiplying ${a} and ${b} is ${a*b}`);
+
+    multiply2(5,5);
+
+    //type 3
+    //default argument
+    const multiply3 = (a=4,b=5) => document.write(`<br><br>Multiplying ${a} and ${b} is ${a*b}`);
+
+    multiply3();            //if no argument is passed, default argument will
+    multiply3(4,4)          //argument is passed
+
+    
+    </script>
+
+  </body>
+</html>
