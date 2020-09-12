@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+
+    <script type="text/javascript">
+      let a = 5;
+      var b = 4;
+      const c = 6;
+      document.write("Initial value of let a : "+a);
+      document.write("<br>Initial value of var b : "+b);
+      document.write("<br>Initial value of const c : "+c);
+
+      random();
+
+      function random(){
+          if(true){
+              let a=10;
+              var b=8;   
+              //c = 12;                 //this will show error
+            document.write("<br><br>Inside \'Function\' and \'if\' block");   
+            document.write("<br>value of let a : "+a);
+            document.write("<br>value of var b : "+b);
+            document.write("<br>value of const c : "+c);
+            console.log(c);
+          }
+          document.write("<br><br>Inside \'Function\' but Outside \'if\' block");
+          document.write("<br>value of let a : "+a);
+          document.write("<br>value of var b : "+b);
+          document.write("<br>value of const c : "+c);
+          console.log(c);
+      }
+    </script>
+
+  </body>
+</html>
