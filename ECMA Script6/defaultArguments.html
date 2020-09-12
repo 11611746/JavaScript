@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Default Arguments</title>
+  </head>
+  <body>
+
+    <script type="text/javascript">
+    //passing no argument;
+    funA();
+    function funA(a){
+        document.write("Value is function A : "+a);
+    }
+
+    //passing no argument
+    funB();
+    function funB(a=5){                             //in this case the default argument will work
+        document.write("<br><br>Value is function B : "+a);
+    }
+
+    //passing argument
+    funC(20);
+    function funC(a=5){                             //in this case the default argument will not work
+        document.write("<br><br>Value is function C : "+a);
+    }
+
+    </script>
+
+  </body>
+</html>
