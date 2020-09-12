@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Fat Arrow Function</title>
+  </head>
+  <body>
+
+    <script type="text/javascript">
+    document.write("Using Normal Function");
+    addition(50,5);             //function call and passing arguments
+
+    function addition(a,b){
+        var c = a;
+        var d = b;
+     document.write("<br>Add "+c+" + "+d+" = "+(c+d));
+    }
+
+    //converting the above function to Arrow Function
+    document.write("<br><br>Using Arrow Function");
+    const add = (a,b) => {document.write("<br>Add "+a+" + "+b+" = "+(a+b))};
+
+    add(50,5);
+
+    </script>
+
+  </body>
+</html>
