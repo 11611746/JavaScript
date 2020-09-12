@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Object Properties</title>
+  </head>
+  <body>
+
+    <script type="text/javascript">
+      const obj = {
+          name: "Paul",
+          year: 2020
+      }
+
+      //Destructuring
+      const { name , year} = obj;
+      
+      //method 1
+      const copyObj = {
+          name: name,
+          year: year
+      }
+
+      document.write("Name : "+copyObj.name);
+      document.write("<br>Year : "+copyObj.year);
+
+      //method 2
+
+      const copyObjValues = {name , year};
+      document.write("<br><br>Name : "+copyObjValues.name);
+      document.write("<br>Year : "+copyObjValues.year);
+
+
+
+    </script>
+
+  </body>
+</html>
