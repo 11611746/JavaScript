@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Destructuring</title>
+  </head>
+  <body>
+
+    <script type="text/javascript">
+      let obj = {
+          name: "Paul",
+          year: 2020
+      }
+
+      //method 1
+      document.write("Method 1");
+      document.write("<br>Name : "+obj.name);
+      document.write("<br>Year : "+obj.year);
+
+      //method 2
+      const name1 = obj.name;
+      const year1 = obj.year;
+      document.write("<br><br>Method 2");
+      document.write("<br>Name : "+name1);
+      document.write("<br>Year : "+year1);
+
+      //method 3 Destructuring
+      const { name , year} = obj;
+      document.write("<br><br>Method 3 Destructuring");
+      document.write("<br>Name : "+name);
+      document.write("<br>Year : "+year);
+
+    </script>
+
+  </body>
+</html>
