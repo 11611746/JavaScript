@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title>Execution Context/Execution Stack/Calling Stack</title>
+  </head>
+  <body>
+
+    <script type="text/javascript">
+    var globalVariable = "Global Variable";
+
+    function one(){
+        var insideVariable = "Inside Variable";
+        debugger;
+        console.log(insideVariable);
+        two();
+        console.log("Function one...");
+    }
+
+    function two(){
+        debugger;
+        console.log("Function Two...");
+        three();
+    }
+
+    function three(){
+        debugger;
+        console.log("Function Three...");
+    }
+
+    debugger;
+    one();
+      
+    </script>
+
+  </body>
+</html>
