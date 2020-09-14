@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>This Keyword</title>
+</head>
+<body>
+
+    <script type="text/javascript">
+
+    //creating object
+    const obj = {
+        name: "paul",
+        year: 2020,
+        display: function(){
+            console.log("Function inside an Object...");
+            console.log(this.name);
+            console.log(this.year);
+            console.log(this);                                  //this will refer to the owner object
+
+            function child(){
+                var name = "Child";
+                console.log("I am "+name);
+                console.log(this);                              //this will refer to the global object, because it is a regular function
+            }
+
+            child();
+        }
+    }
+
+    obj.display();
+    </script>
+    
+</body>
+</html>
