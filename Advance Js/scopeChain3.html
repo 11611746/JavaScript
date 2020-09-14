@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Scope Chain</title>
+</head>
+<body>
+
+    <script type="text/javascript">
+    var a = "Hello Geeks. ";
+
+    function one(){
+        var b = "How are you? ";
+        two();
+        console.log(a+b+c);
+
+        function two(){
+            var c = "I hope, you all are doing good... ";
+            console.log(a+b+c);
+        }
+    }
+
+    one();
+
+    </script>
+    
+</body>
+</html>
