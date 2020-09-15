@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Non-Primitive DataType</title>
+</head>
+<body>
+    <script type="text/javascript">
+    const obj = {
+        name: "paul",
+        year: 2020,
+    }
+
+    obj.type = "Technical";
+    console.log(obj);
+    console.log(obj.type);
+
+    console.log(typeof({}));
+    console.log(typeof([]));
+    console.log(typeof(function(){}));
+
+    var funDisplay = () => {console.log("Fat arrow function")};
+
+    //this will prove that the function is also an object in JS, if it prints the value of "funDisplay.Year".
+    funDisplay.Year = 2020;
+    console.log(funDisplay.Year);
+
+
+    var funDis = () => {console.log("Fat arrow function")};
+    var fun = funDis;
+
+    //output will be true due to same reference
+    if(funDis===fun){
+        console.log("true");
+    }else{
+        console.log("false");
+    }
+
+    //output will be false due to different references
+    if(funDis===funDisplay){
+        console.log("true");
+    }else{
+        console.log("false");
+    }
+    </script>
+</body>
+</html>
