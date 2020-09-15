@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>pass by value/pass by reference</title>
+</head>
+<body>
+    <script type="text/javascript">
+    "use strict";
+
+    let likes = 100;
+
+    const obj = {
+        name: "rahul",
+        year: 2020
+    }
+
+    const fun = (a,b) => {
+        a = 200;
+        console.log(a)
+        b.year = 2019;
+    }
+
+    fun(likes,obj)
+
+    console.log(likes);
+    console.log(obj.year);
+    </script>
+</body>
+</html>
