@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anonymous Function</title>
+</head>
+<body>
+    <script type="text/javascript">
+    //type one
+    const store = function(){
+        return 2;
+    }
+    console.log(store());
+
+    //type two
+    document.addEventListener('click',function(){
+        console.log("Hello Geeks");
+    });
+
+    //type three
+    const fun = function(a,b){
+        console.log(a+b);
+    }
+
+    fun(5,5);
+    </script>
+</body>
+</html>
