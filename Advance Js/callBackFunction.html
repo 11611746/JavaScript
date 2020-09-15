@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>CallBack Function</title>
+</head>
+<body>
+    <script type="text/javascript">
+    function callMe(name,calling){
+        console.log(`${name} please call me back, when you will be free.`);
+        console.log(calling());
+    }
+
+    const reply = () => {
+        console.log("Calling Back ...");
+        return "I called You...";
+    }
+
+    callMe("Rohan",reply);
+    </script>
+</body>
+</html>
