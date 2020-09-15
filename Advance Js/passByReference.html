@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Pass By Reference</title>
+</head>
+<body>
+    <script type="text/javascript">
+    const obj = {
+        name : "sujal",
+        year : 2020
+    };
+
+    const obj1 = {
+        name : "sujal",
+        year : 2020
+    };
+
+    console.log(obj);
+    console.log(obj1);
+
+    //for each object new reference is created
+    if(obj===obj1){
+        console.log(true);
+    }
+    else{
+        console.log(false);
+    }
+
+    //the same reference is passed here
+    const obj2 = obj;
+    if(obj===obj2){
+        console.log(true);
+    }
+    else{
+        console.log(false);
+    }
+
+    //notice the difference below
+    console.log(obj);
+    console.log(obj2);
+
+    obj.name = "rahul";
+
+    console.log(obj);
+    console.log(obj2);
+    </script>    
+</body>
+</html>
