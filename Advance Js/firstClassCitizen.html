@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Function is a first class citizen</title>
+</head>
+<body>
+    <script type="text/javascript">
+    "use strict";
+
+    //assigning a function to a variable
+    const display = function(){
+        console.log("Hello Geeks");
+    }
+    display();
+
+    //method passing a function in object property
+    const funDis = {
+        name: "rahul",
+        sum: function(){
+            console.log("Function inside an object");
+        }
+    }
+    funDis.sum();
+
+    //passing a function as an argument
+    const number = function(){
+        return 5;
+    }
+
+    function addition(a,b){
+        console.log(a()+b);
+    }
+    addition(number,5);
+
+    //returning function
+    function sub(){
+        return function substract(){
+            console.log("Returning a function....");
+        }
+    }
+
+    sub()();
+
+    let a = sub();
+    a();
+    
+
+    function mul(a,b){
+        console.log(a/b);
+        return function multiply(a,b){
+            console.log(a*b);
+        }
+    }
+
+    mul(7,2)(2,2);
+    </script>
+</body>
+</html>
