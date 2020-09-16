@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Higher Order Function</title>
+</head>
+<body>
+    <script type="text/javascript">
+    const ask = (name) => {
+        if(name === "rahul"){
+            return function(question){
+                console.log(`Hello ${name} please tell me about ${question}?`);
+            }
+        }
+        else if(name === "sujal"){
+            return function(question){
+                console.log(`Hello ${name} please tell me about ${question}?`);
+            }
+        }
+        else if(name === "uttam"){
+            return function(question){
+                console.log(`Hello ${name} please tell me about ${question}?`);
+            }
+        }
+        else{
+            console.log("Sorry wait for your turn...");
+        }
+    }
+
+    ask("rahul")(`"Yourself"`);
+    ask("sujal")(`"WHO"`);
+    ask("uttam")(`"Cost Capital Income"`);
+    ask("unknown");
+
+    let a = ask("rahul");
+    a(`"Molar Mass"`)
+    </script>
+</body>
+</html>
