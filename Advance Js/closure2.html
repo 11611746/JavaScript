@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+    const outer = (name) =>{
+        return function(question){
+            if(name==="rahul"){
+                console.log(`${name} can you explain ${question}`);
+            }
+            else if(name==="sujal"){
+                console.log(`${name} can you explain ${question}`);
+            }
+            else if(name==="uttam"){
+                console.log(`${name} can you explain ${question}`);
+            }
+            else{
+                console.log(`${name} you are not in the list`);
+            }
+        }
+    }
+
+    outer("rahul")("UI");
+    outer("sujal")("UX");
+    outer("rohan")("web");
+    </script>
+</body>
+</html>
