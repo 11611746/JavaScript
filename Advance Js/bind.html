@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Bind Method</title>
+</head>
+<body>
+    <script type="text/javascript">
+     const obj = {
+         name : "rahul",
+         fun: function(){
+             console.log(`My name is ${this.name}.`);
+         }
+     };
+
+     obj.fun();
+    //let bindFun = obj.fun;
+    //bindFun();
+
+    let bindFun = obj.fun.bind(obj);
+    bindFun();
+
+    
+    const obj1 = {
+        name: "sujal"
+    }
+
+    const obj2 = {
+        name: "uttam"
+    }     
+
+    const obj3 = {
+        name: "bhopu"
+    }
+
+    function fun(txt){
+        console.log(`${this.name} how are you? ${txt}`);
+    }
+
+    fun();
+
+    let funCall1 = fun.bind(obj1);
+    funCall1("How is your work going on?");
+    let funCall2 = fun.bind(obj2);
+    funCall2("Sorry");
+    let funCall3 = fun.bind(obj3);
+    funCall3("Cool");
+
+
+
+    </script>
+</body>
+</html>
