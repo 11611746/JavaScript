@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>ForEach Loop</title>
+</head>
+<body>
+    <script type="text/javascript">
+    let array = ["apple","banana","carrot","grapes","watermelon","papaya"];
+    
+    array.forEach(function(item,index){
+        console.log(index+" -- "+item);
+    });
+
+    let arrayNum = [10,15,13,14,12];
+    
+    arrayNum.forEach(function(item,index,arr){
+        console.log(arr[index]+50);
+    });
+    </script>
+</body>
+</html>
