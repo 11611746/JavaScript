@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>For Of Loop</title>
+</head>
+<body>
+    <script type="text/javascript">
+        let array = ["hello","guys","how","are","you"];
+        for(item of array){
+            console.log(item);
+        }
+
+        let arrayNum = [1,3,5,4,7,9];
+        for(item of arrayNum){
+            console.log(item+10);
+        }
+
+        let count = 0;
+        for(character of  "how are you?"){
+
+            if(character==='o'){
+                count++;
+            }
+            console.log(character);
+        }
+        console.log(count);
+
+        // let maximum = Math.max.apply(null,[1,4,6,3,9]);
+        // console.log(maximum)
+    </script>
+</body>
+</html>
