@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+    //template string methods
+    let name = "paul";
+    console.log(`name is ${name}`);
+    //check the first character of a string
+    console.log(`${name}`.startsWith('p'));
+    //check the last character of a string
+    console.log(`${name}`.endsWith('l'))
+    //check the string/character is present in a string
+    let name1 = "walker paul"
+    console.log(`${name1}`.includes('e'));
+    console.log(`${name1}`.includes('walker'));
+    //find the index of a character in a string
+    console.log(`${name1}`.indexOf('a'));
+    //this will give the last index of a character in a string
+    console.log(`${name1}`.lastIndexOf('a'));
+    //this will make the string to uppercase
+    console.log(`${name1}`.toUpperCase());
+    //this will replace the old character with the new input charater
+    console.log(`${name1}`.replace('p','P'));
+
+
+
+    //to make it more readable assign the value
+    let text = `${name1} `;
+    //this will repeat the given text as per the repeation
+    console.log(text.repeat(3));
+    </script>
+</body>
+</html>
