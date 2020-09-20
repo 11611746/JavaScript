@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script type="text/javascript">
+        //this is a 'FUNCTION SCOPE'
+        var name = "paul";
+        name = "PAUL PAUL";
+        console.log(name);
+
+        //this is similar to var but it has a 'BLOCK SCOPE'.
+        let name1 = "harry";
+        name1 = "HARRY1"
+        console.log(name1);
+
+        //once the value is declared the value can't be changed further and it is a 'BLOCK SCOPE'.
+        // const name2 = "tom";
+        // name2 = "TOM1";
+        // console.log(name2);
+
+//------------------------------------------------------------------------------------------------------------------------------
+
+        //BLOCK SCOPE   -> if{BLOCK SCOPE}
+        function block(send){
+            if(send){
+                let name3 = "Jerry";
+                const name4 = "JERRY2";
+                console.log('name3 : '+name3+ ' and '+ 'name4 : '+name4);
+            }
+            //console.log('name3 : '+name3+ ' and '+ 'name4 : '+name4);             //since let and const is a block scope this will give error because the scope is within the if block
+        }
+
+        block(true);
+
+        //FUNCTION SCOPE    -> function abc(){FUNCTION SCOPE}
+        function fun(){
+            if(true){
+                var name5 = "Tom & Jerry";
+            }
+            console.log('names5 : '+name5);                                         //since the scope is within the function this can be accessed anywhere within the function                          
+        }
+        fun();
+
+//------------------------------------------------------------------------------------------------------------------------------
+
+        var a = "hello";
+        if(true){
+            a = "hi";
+            console.log(a);
+        }
+        console.log(a);
+
+        //let
+        let b = "hey";
+        if(true){
+            let b = "HEY1";
+            console.log(b);
+        }
+        console.log(b);
+
+        let bb = "hey";
+        if(true){
+            bb = "HEY1";
+            console.log(bb);
+        }
+        console.log(bb);
+
+        //const
+        const c = "hello1";
+        if(true){
+            const c = "HELLO1";
+            console.log(c);
+        }
+        console.log(c);
+
+        const cc = "hello1";
+        if(true){
+            cc = "HELLO1";
+            console.log(cc);
+        }
+        console.log(cc);
+
+    </script>
+</body>
+</html>
