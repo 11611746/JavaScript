@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //swap two numbers without using third variable
+        let a = 10;
+        let b = 20;
+        console.log(`a = ${a} and b = ${b}`);
+        b = (b = a + (a=b))-a;
+        console.log(`a = ${a} and b = ${b}`);
+
+        //with array destructuring
+        let c = 50;
+        let d = 80;
+        console.log(`c = ${c} and d = ${d}`);
+        [c,d] = [d,c];
+        console.log(`c = ${c} and d = ${d}`);
+    </script>
+</body>
+</html>
