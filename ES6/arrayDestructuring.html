@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //array destructuring
+        let arr = ["java","C","C#","Javascript","Python"];
+
+        //this will act as an idividual variable and we are storing the array values in them
+        let [first,second,third,fourth,fifth] = arr;
+        console.log(first);
+        console.log(second);
+        console.log(third);
+        console.log(fourth);
+        console.log(fifth);
+
+        //if you want the first and the last value than get the length of the array first
+        console.log(arr.length);
+
+        let one,last;
+
+        [one,,,,last] = arr;
+        console.log(one);
+        console.log(last);
+    </script>
+</body>
+</html>
