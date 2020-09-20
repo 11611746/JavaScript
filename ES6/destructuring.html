@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //object destructuring
+        const obj = {
+            name : "paul",
+            standard : 12
+        }
+
+        //to access the value of property we need to use objectName.propertName
+        console.log(`name is ${obj.name} and standard is ${obj.standard}`);
+
+        //with the help of destructuring
+        let {name,standard} = obj;
+        //now it will treat as an normal variable, the order must be maintain and the variable name must match with the property name or else it will show error
+        console.log(`name is ${name} and standard is ${standard}`);
+
+        //to rename the variabe
+        let {name:firstName,standard:std} = obj;
+        console.log(`name is ${firstName} and standard is ${std}`);
+
+    </script>
+</body>
+</html>
