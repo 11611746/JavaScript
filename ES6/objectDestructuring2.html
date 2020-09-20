@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //access a value of inner object using destructuring
+        const obj = {
+            name : "paul",
+            innerObj : {
+                title : "xyz"
+            }
+        }
+
+        console.log(obj.innerObj.title);
+
+        let {name,innerObj:innerObject} = obj;
+        console.log(`outer object value : ${name} and ${innerObject}`);
+        console.log(`inner object value : ${innerObject.title}`);
+
+
+    </script>
+</body>
+</html>
