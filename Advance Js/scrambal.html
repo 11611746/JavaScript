@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        let str = "hellohi";
+        let arr = [];
+        let scramble = "";
+
+        for(;arr.length<str.length;){
+            var randomNumber = Math.floor(Math.random() * str.length);
+            if(arr.indexOf(randomNumber) === -1){
+                arr.push(randomNumber);
+            }
+        }
+
+        for(let i=0;i<arr.length;i++){
+            scramble = scramble + str[arr[i]];
+        }
+
+        console.log(scramble);
+
+    </script>
+</body>
+</html>
