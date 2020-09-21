@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //sign() and trunc() were introduced in ES6
+
+        //sign() method
+        let number = 24.56;
+        let number1 = -4.7;
+        let number2 = 0;
+        let number3 = -0;
+        let number4 = NaN;
+        let number5 = 'hello';
+        console.log(Math.sign(number));
+        console.log(Math.sign(number1));
+        console.log(Math.sign(number2));
+        console.log(Math.sign(number3));
+        console.log(Math.sign(number4));
+        console.log(Math.sign(number5));
+
+        //trunc() method
+        let num = 89.567;
+        let num1 = 89.267;
+        let num2 = 89.967;
+        let num3 = -89.567;
+        console.log(Math.trunc(num));
+        console.log(Math.trunc(num1));
+        console.log(Math.trunc(num2));
+        console.log(Math.trunc(num3));
+
+        console.log(Math.floor(num2));
+        console.log(Math.floor(num3));
+
+    </script>
+</body>
+</html>
