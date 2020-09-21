@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //default parameter
+        function fun(a,b){
+            console.log(b);
+            console.log("sum is :"+(a+b));
+        }
+
+        fun(4);
+
+        //using default parameter
+        function funDefault(a=1,b=1){
+            console.log(`sum is ${a+b}`);
+        }
+
+        funDefault(5);
+
+        //how default parameter works
+        function funDef(a,b){
+            a = (typeof a==='undefined')?1:a;
+            b = (typeof b==='undefined')?1:b;
+            console.log("sum is "+(a+b));
+        }
+
+        funDef(5);
+    </script>
+</body>
+</html>
