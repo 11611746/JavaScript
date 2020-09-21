@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //spread operator
+        function sum(a,b,c,d){
+            console.log("sum is "+(a+b+c+d));
+        }
+
+        let arr = [1,2,3,4];
+        //spread operator is same as REST operator but it works opposite
+        console.log(...arr);
+        //using apply method
+        sum.apply(null,arr);
+        //using spread operator
+        sum(...arr);
+
+        //join two or more array into one
+        let arr1 = [1,2,3];
+        let arr2 = [4,5,6];
+        let arr3 = [7,8,9];
+        arr1 = arr1.concat(arr2).concat(arr3);
+        console.log(arr1);
+        console.log(arr2);
+        console.log(arr3);
+
+        //join two or more array into one with spread operator
+        let arr4 = [1,2,3];
+        let arr5 = [4,5,6];
+        let arr6 = [7,8,9];
+        arr4 = [...arr4,...arr5,...arr6];
+        console.log(arr4);
+
+        //add two element in array without using push();
+        let arr7 = [10,11,12];
+        arr6 = [...arr6,...arr7,13,14];
+        console.log(arr6);
+
+        //copy the content of one arry to another array and add two element to the other array and console.log() both array;
+        let array1 = [1,3,5,7];
+        let array2 = array1;
+        console.log(array1);
+        console.log(array2);
+        //adding two element in array2
+        array2.push(9,11);
+        console.log(array1);
+        console.log(array2);            //yo can see both the array outputs are same because the use same reference. so, to solve the problem we can use spread operator
+        array2 = [...array2,13,15];
+        console.log(array1);
+        console.log(array2);
+
+
+    </script>
+</body>
+</html>
