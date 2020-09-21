@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+   <script>
+    //rest parameters
+    function fun1(a,b,c,d){                     //normal function
+        console.log(a +" "+ b +" "+ c +" "+ d);
+        console.log("sum is "+(a+b+c+d));
+        }
+
+    fun1(1,2,3,4);
+
+    const fun2 = (...a) => {                        //fat arrow function
+        console.log(...a);
+        sum = 0;
+        for(let i of a){
+            sum = sum + i;
+        }
+        console.log(`sum is ${sum}`);
+        };
+
+    fun2(1,2,3,4);
+   </script>
+</body>
+</html>
