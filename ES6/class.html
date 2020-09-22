@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        class MyFirstClass{
+            //default constructor
+            constructor(name,age,sex){
+                //property should be initialize with in the constructor
+                this.name = name;
+                this.age = age;
+                this.sex = sex;
+                this.documents = 'Aadhar and DL';
+                this.percentage = 79;
+            }
+
+
+            //method
+            biodata(status){
+                console.log(`My name is ${this.name}`);
+                console.log(`My age is ${this.age}`);
+                console.log(`My sex is ${this.sex}`);
+                console.log(`Documents submitted ${this.documents}`);
+                console.log(`Percentage secured ${this.percentage}%`);
+                console.log(`Verification status is ${status}`);
+            }
+
+        }
+
+        //creating the object of the class
+        let classObj = new MyFirstClass('paul',23,'Male');
+        //calling the method of the class with the help of class object
+        classObj.biodata('pending');
+
+    </script>
+</body>
+</html>

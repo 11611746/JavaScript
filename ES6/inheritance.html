@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //this is parent class
+        class MyFirstClass{
+            constructor(name,age,sex){
+                //property should be initialize with in the constructor
+                this.name = name;
+                this.age = age;
+                this.sex = sex;
+            }
+            //method(instance method)
+            biodata(status){
+                return `Student name : ${this.name} 
+                \nStudent age : ${this.age} 
+                \nStudent sex : ${this.sex} 
+                \nStudent verification status is ${status} \n\n `;
+            }
+        }
+
+        //this base class/child class
+        class MyInheritClass extends MyFirstClass{
+            //if you are defining a new property in the base class with respect to the parent class property than you nedd to define the default constructor method
+            constructor(name,age,sex,course){
+                super(name,age,sex);                //to access the parent class propert use super keyword
+                this.course = course;
+            }
+
+            course_biodata(status){
+                console.log(`Student name : ${this.name} 
+                \nStudent age : ${this.age} 
+                \nStudent sex : ${this.sex} 
+                \nStudent verification status is ${status} 
+                \nCourse Opted : ${this.course}\n\n `);
+            }
+
+            std_biodata(status){
+                //super.biodata(status) this will exactly work like the above method course_biodata(status)
+                console.log(`${super.biodata(status)}
+                \nCourse Opted : ${this.course}`);
+            }
+
+
+        }
+
+
+        let classObj = new MyFirstClass('paul',23,'Male');
+        console.log(classObj.biodata('pending'));
+        let inheritClassObj = new MyInheritClass('walker',27,'Female','B.tech CSE');
+        inheritClassObj.course_biodata('verified');
+        let inheritClassObj1 = new MyInheritClass('Sanju',29,'Male','B.tech EEE');
+        inheritClassObj1.std_biodata('verified');
+
+    </script>
+</body>
+</html>
