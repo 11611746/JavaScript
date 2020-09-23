@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        *{
+            letter-spacing: 3px;
+            word-spacing: 5px;
+            font-size: 1.5rem;
+            text-align: justify;
+            line-height: 180%;
+        }
+
+        .main{
+            height: 100vh;
+            width: 100%;
+        }
+
+    </style>
+</head>
+<body>
+    <div class='main'>
+        <p id='details'></p>
+    </div>
+    <script>
+        fetch('https://corona-api.com/countries').then((covidData) =>{
+            //console.log(covidData);
+            return covidData.json();
+        }).then((covidData) => {
+            console.log(covidData.data[96]);
+            document.getElementById('details').innerHTML = `Country : ${covidData.data[96].name}
+            <br>Country Code : ${covidData.data[96].code}
+            <br>Toatal Population : ${covidData.data[96].population}
+            <br>Last Updated : ${covidData.data[96].updated_at}
+            <br>Today Confirmed Cases : ${covidData.data[96].today.confirmed}
+            <br>Today Deaths : ${covidData.data[96].today.deaths}
+            <br>Total Confirmed Cases : ${covidData.data[96].latest_data.confirmed}
+            <br>Toatal Deaths : ${covidData.data[96].latest_data.deaths}
+            <br>Toatal Recovered : ${covidData.data[96].latest_data.recovered}
+            <br>Toatal Critical Cases : ${covidData.data[96].latest_data.critical}`;
+        }).catch((error) =>{
+            console.log(`ERROR : ${error}`);
+        })
+    </script>
+</body>
+</html>
+
