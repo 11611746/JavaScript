@@ -32,13 +32,17 @@
         };
  
         async function getData(){
-            const rollnoData = await promiseObj;
-            console.log(rollnoData);
+            try {
+                const rollnoData = await promiseObj;
+                console.log(rollnoData);
 
-            const studentData = await getBiodata(rollnoData[2]);
-            console.log(studentData);
+                const studentData = await getBiodata(rollnoData[2]);
+                console.log(studentData);
 
-            return rollnoData;
+                return rollnoData;
+            } catch (error) {
+                console.log(`ERROR : ${error}`);
+            }
         }
         
         const fetch = getData().then((value) => {
