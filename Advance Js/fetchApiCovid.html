@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Covid19 Info</title>
+    <style>
+        *{
+            letter-spacing: 3px;
+            word-spacing: 5px;
+            font-size: 1.2rem;
+            text-align: justify;
+            line-height: 180%;
+        }
+
+        .main{
+            height: 100vh;
+            width: 100%;
+        }
+
+    </style>
+</head>
+<body>
+    <div class='main'>
+        <p id='details'></p>
+    </div>
+    <script>
+        async function getCovidData(country){
+
+            try {
+                const apiData = await fetch('https://corona-api.com/countries');
+                const apiJsonFormat = await apiData.json();
+                const countryData = apiJsonFormat.data[`${country}`];
+                
+                // document.getElementById('details').innerHTML = `Country : ${countryData.name}
+                // <br>Country Code : ${countryData.code}
+                // <br>Toatal Population : ${countryData.population}
+                // <br>Last Updated : ${countryData.updated_at}
+                // <br>Today Confirmed Cases : ${countryData.today.confirmed}
+                // <br>Today Deaths : ${countryData.today.deaths}
+                // <br>Total Confirmed Cases : ${countryData.latest_data.confirmed}
+                // <br>Toatal Deaths : ${countryData.latest_data.deaths}
+                // <br>Toatal Recovered : ${countryData.latest_data.recovered}
+                // <br>Toatal Critical Cases : ${countryData.latest_data.critical}`;
+
+                console.log(`Country : ${countryData.name}
+                <br>Country Code : ${countryData.code}
+                <br>Toatal Population : ${countryData.population}
+                <br>Last Updated : ${countryData.updated_at}
+                <br>Today Confirmed Cases : ${countryData.today.confirmed}
+                <br>Today Deaths : ${countryData.today.deaths}
+                <br>Total Confirmed Cases : ${countryData.latest_data.confirmed}
+                <br>Toatal Deaths : ${countryData.latest_data.deaths}
+                <br>Toatal Recovered : ${countryData.latest_data.recovered}
+                <br>Toatal Critical Cases : ${countryData.latest_data.critical}`);
+            } catch (error) {
+                console.log(`ERROR : ${error}`);
+            }
+            
+        }
+
+        getCovidData(96);
+
+        getCovidData(111);
+
+        getCovidData(123);
+
+        getCovidData(94);
+    </script>
+</body>
+</html>
