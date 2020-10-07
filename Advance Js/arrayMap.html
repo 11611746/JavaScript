@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <script>
+        //Array Map method
+        const oldArr = ['paul','vikas','shivam'];
+        console.log(oldArr[0]);
+
+        const newArr = oldArr.map((currentValue, index, arr)=>{
+            return index+" : "+currentValue;
+            //console.log(arr);
+        });
+
+        console.log(newArr);
+
+        //array of an object
+        const stdData = [
+            {
+                id: 1,
+                name: 'paul',
+                degree: 'B.tech'
+            },
+            {
+                id: 2,
+                name: 'shivam',
+                degree: 'B.tech'
+            },
+            {
+                id: 3,
+                name: 'padmanav',
+                degree: 'BCA'
+            }
+        ];
+
+        //console.log(stdData[1]);
+        const newStdData = stdData.map((currentValue, index)=>{
+            console.log(currentValue.name);
+            return currentValue.name;
+        })
+
+        console.log(`Student Names = ${newStdData}`);
+    </script>
+</body>
+</html>
